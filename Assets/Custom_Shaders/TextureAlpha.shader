@@ -58,9 +58,9 @@ Shader "Custom/TextureAlpha" {
 			{
 //				float4 color = (tex2D(_MainTex, i.uv) * (1-_Tween)  + tex2D(_SecondTex, i.uv) * _Tween) * _Color;
 				float4 color= tex2D(_MainTex, i.uv);
-				float lum = 0.3 * color.r + 0.59 * color.g +0.11*color.b;
-				float4 finalCol = (float4(lum,lum,lum,color.a)) ;
-				return lum* _Color;
+//				float lum = 0.3 * color.r + 0.59 * color.g +0.11*color.b;
+//				float4 finalCol = (float4(lum,lum,lum,color.a)) ;
+				return color;
 			}
 
 			ENDCG	
